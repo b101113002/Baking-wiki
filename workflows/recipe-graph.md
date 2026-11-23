@@ -59,9 +59,10 @@ flowchart TD
     R3 -->|否／重大錯誤| H
     DC -->|一致| L[DEDUPLICATE]
     DC -->|簡報內容不一致| RP[REPAIR_PRESENTATION]
-    RP --> DC
+    RP --> R6{簡報修正次數 < 2?}
+    R6 -->|是| DC
+    R6 -->|否| H
     DC -->|檢查工具未接通| Q
-    DC -->|重試超限仍不一致| H
     L --> M{有重複或高度相似項目?}
     M -->|否| N[PERSIST]
     M -->|是| O[DUPLICATE_REVIEW]
