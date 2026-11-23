@@ -8,7 +8,6 @@
 - [GitHub 專案成果](https://github.com/b101113002/Baking-wiki)
 
 ## 作業繳交與檢查
-- [六項作業成果與連結](reports/submission-summary.md)
 - [食譜內容稽核紀錄](reports/recipe-audit-2026-11-23.md)
 - [人工來源稽核／Graph 模擬執行紀錄](reports/execution-record.md)
 - [作業反思](reports/reflection.md)
