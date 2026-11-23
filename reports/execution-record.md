@@ -42,7 +42,7 @@
 | DOC_CONSISTENCY_CHECK | PASS（人工） | 五份 Markdown 與五份 HTML 已人工核對並同步修正；程式自動比較器仍未連接 |
 | DEDUPLICATE | PASS（人工） | 未發現相同來源與相同配方的重複食譜 |
 | PERSIST | PASS | 相關更新檔案已收到 GitHub 成功提交回應 |
-| REPORT | PASS | 更新索引、稽核、反思與繳交摘要 |
+| REPORT | PASS | 更新索引、稽核、反思與相關專案文件 |
 
 ## C. 本次狀態統計
 - PASS：RCP-001、RCP-002、RCP-003、RCP-004、RCP-005，共 5 篇。
