@@ -1,11 +1,19 @@
 # 烘焙 Wiki 食譜索引
 
-| ID | 食譜 | 類型 | 來源 | 狀態 |
-|---|---|---|---|---|
-| RCP-001 | [新手簡易歐式麵包](wiki/recipes/easiest-loaf.md) | 酵母麵包 | SRC-001 | PASS |
-| RCP-002 | [經典磅蛋糕](wiki/recipes/original-pound-cake.md) | 奶油蛋糕 | SRC-002 | PASS |
-| RCP-003 | [免奶蛋巧克力蛋糕](wiki/recipes/cake-pan-cake.md) | 巧克力蛋糕 | SRC-003 | PASS |
-| RCP-004 | [純素巧克力夾心餅乾蛋糕](wiki/recipes/vegan-cookies-cream-cake.md) | 純素蛋糕 | SRC-004 | WARNING |
-| RCP-005 | [免揉鄉村手作麵包](wiki/recipes/artisan-bread.md) | 免揉麵包 | SRC-005 | PASS |
+本索引列出目前已人工查核的五份來源食譜。狀態反映本次 2026-11-23 的內容與時間檢查，不代表已由自動化 Graph 執行。
 
-PASS：來源及核心資料足夠。WARNING：仍有欄位或產品資訊待確認。FAIL：不應進正式索引。
+| ID | 食譜 | 類型 | 來源 | 狀態 | 主要注意事項 |
+|---|---|---|---|---|---|
+| RCP-001 | [新手簡易歐式麵包](wiki/recipes/easiest-loaf.md) | 酵母麵包 | SRC-001 | WARNING | 原站總時間與分段發酵、烘烤時間難完全對應 |
+| RCP-002 | [經典磅蛋糕](wiki/recipes/original-pound-cake.md) | 奶油蛋糕 | SRC-002 | PASS | 出爐後靜置及完全冷卻另計 |
+| RCP-003 | [Cake Pan Cake 免蛋奶巧克力蛋糕本體](wiki/recipes/cake-pan-cake.md) | 巧克力蛋糕 | SRC-003 | PASS | 蛋糕本體不含奶蛋；原始糖霜含乳，非乳版本需查核巧克力成分 |
+| RCP-004 | [純素巧克力夾心餅乾蛋糕](wiki/recipes/vegan-cookies-cream-cake.md) | 純素蛋糕 | SRC-004 | WARNING | 需完全冷卻後才能抹糖霜；冷卻與裝飾時間未列入原站時間 |
+| RCP-005 | [免揉鄉村手作麵包](wiki/recipes/artisan-bread.md) | 免揉麵包 | SRC-005 | PASS | 已修正簡報誤用另一份揉製麵包配方；出爐至少冷卻 20 分鐘 |
+
+## 狀態定義
+- **PASS**：來源可追溯、核心材料與步驟完整，且重要時間、過敏原及操作差異已清楚揭露。
+- **WARNING**：仍有明確時間或商品資訊限制，使用前須留意；不可把未確認數據當成保證值。
+- **FAIL**：來源無效、核心資料無法確認或有重大矛盾；不得發布正式食譜。
+
+## 查核範圍
+五篇食譜頁、對應五份 HTML 教學簡報、來源連結、材料與步驟對照、時間定義、模具、烤溫、發酵／冷卻、過敏原與安全提醒。詳細結果見 [2026-11-23 食譜稽核紀錄](reports/recipe-audit-2026-11-23.md)。
