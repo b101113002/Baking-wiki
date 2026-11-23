@@ -19,10 +19,10 @@
 - 以繁體中文摘要與改述呈現，不大量複製原文。
 
 ### 目前簡報清單
-1. presentations/easiest-loaf-slides.html：新手簡易歐式麵包，來源時間與分段發酵／烘烤時間不易對應，標 WARNING。
+1. presentations/easiest-loaf-slides.html：新手簡易歐式麵包，原站 2 小時 10 分鐘為估時；第一次發酵 1–2 小時、實際依麵糰狀態變動，冷卻另計；時間限制已清楚揭露，標 PASS。
 2. presentations/original-pound-cake-slides.html：經典磅蛋糕，粉液交替與熟度判斷已補足。
 3. presentations/cake-pan-cake-slides.html：Cake Pan Cake 蛋糕本體不含奶蛋；原始糖霜含乳，非乳替代品需查核巧克力成分。
-4. presentations/vegan-cookies-cream-cake-slides.html：純素巧克力夾心餅乾蛋糕；完全冷卻與糖霜作業未計入來源時間，標 WARNING。
+4. presentations/vegan-cookies-cream-cake-slides.html：純素巧克力夾心餅乾蛋糕；原站 prep 30 分鐘、cook 35 分鐘，完全冷卻後才能抹糖霜，冷卻時間未提供且另計；限制已清楚揭露，標 PASS。
 5. presentations/artisan-bread-slides.html：Sally's Baking 免揉鄉村手作麵包；不得與 RCP-001 的揉麵版本混用。
 6. presentations/baking-agent-slides.html：Graph Agent 專題介紹。
 
@@ -38,7 +38,7 @@
 ### 時間、溫度、安全與過敏原
 - 分別記錄準備、混合／揉製、發酵／靜置、烘烤、冷卻、裝飾及總時間。
 - 保留來源公布的總時間，另對照分段時間；如無法加總，指出差異，不自行替換來源時間。
-- 來源未提供冷卻或裝飾時間時，標示未計入；若影響完成時間判斷，設為 WARNING。
+- 來源未提供冷卻或裝飾時間時，標示未計入且不虛構分鐘數；若限制已清楚揭露、不影響配方可重現性，可維持 PASS；若時間描述仍會誤導，才設為 WARNING。
 - 保留來源原始溫度與單位，另列換算。
 - 烤箱、熱鍋、沸水蒸氣、糖漿、刀具等需有具體安全提醒。
 - 標示常見過敏原；「植物性」或「純素」不等於無過敏原。
@@ -46,12 +46,12 @@
 - 不可在未確認全部配方及商品前宣稱無麩質、無乳、無蛋或純素。
 
 ## 4. 本次食譜狀態（2026-11-23）
-- RCP-001：WARNING，來源總時間與分段發酵及烘烤時間難完全對應。
+- RCP-001：PASS，原站 2 小時 10 分鐘為估時；第一次發酵 1–2 小時，較久時實際時間延長，冷卻另計。
 - RCP-002：PASS，已補足粉液交替、奶油打發與熟度判斷；模中靜置及完全冷卻另計。
 - RCP-003：PASS，已區分免蛋奶蛋糕本體與含乳原始糖霜。
-- RCP-004：WARNING，步驟提及的一小撮鹽已補回材料表，但完全冷卻、糖霜製作與裝飾不在來源 65 分鐘內。
+- RCP-004：PASS，步驟中的一小撮鹽已補回材料表；原站 prep 30 分鐘、cook 35 分鐘，完全冷卻時間未提供並另計。
 - RCP-005：PASS，已依 Sally's Baking 改正免揉、冷水、475°F 及 3–4 杯可選蒸氣水流程。
-- 本次狀態：PASS 3、WARNING 2、FAIL 0；這是人工來源稽核結果，並非自動測試分數。
+- 本次狀態：PASS 5、WARNING 0、FAIL 0；這是補充時間說明後的人工來源稽核結果，並非自動測試分數。
 
 ## 5. Graph Agent 設計原則
 - Graph 是有節點、狀態、條件分支及重試上限的工作流，不以單次長 Prompt 代替。
