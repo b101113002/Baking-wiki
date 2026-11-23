@@ -61,6 +61,6 @@
 - 五份 presentations/*-slides.html
 - workflows/recipe-graph.md、workflows/langgraph-example.py
 - index.md、raw/sources.md、agent.md、project-notes.md、README.md、log.md
-- reports/recipe-audit-2026-11-23.md、reports/reflection.md、reports/submission-summary.md
+- reports/recipe-audit-2026-11-23.md、reports/reflection.md
 
 GitHub Pages 是否啟用未經確認；本紀錄只確認 GitHub Repository 檔案已提交。
