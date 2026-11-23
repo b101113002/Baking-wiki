@@ -53,29 +53,9 @@
 - FAIL 與無法判定的重複衝突進入 HUMAN_REVIEW。
 
 ### Mermaid Graph
-```mermaid
-flowchart TD
- A([START]) --> B[PLAN]
- B --> C[SEARCH]
- C --> D[FETCH]
- D --> E{SOURCE_GATE}
- E -->|PASS| F[PARSE]
- E -->|FAIL| C
- F --> G[NORMALIZE]
- G --> H[SCHEMA_CHECK]
- H -->|PASS| I[REASONING_CHECK]
- H -->|格式可修正| J[REPAIR]
- H -->|原始資料缺漏| C
- J --> H
- I -->|PASS| K[DEDUPLICATE]
- I -->|WARNING| L[待確認區]
- I -->|FAIL| C
- K --> M[PERSIST]
- L --> M
- M --> N[REPORT]
- N --> O([END])
-```
 
+正式 Graph 圖以 [workflows/recipe-graph.md](workflows/recipe-graph.md) 的「流程圖」為唯一維護版本，避免 Agent 規格與工作流文件出現兩張不同步的圖。該圖包含來源閘門、格式修復、內容檢查、待確認區、去重審查、保存重試與人工審查。
+ 
 ## 6. 食譜標準資料結構
 每筆食譜至少包含：
 - 食譜名稱（繁體中文）與原文名稱
