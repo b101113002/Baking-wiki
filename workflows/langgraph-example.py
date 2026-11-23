@@ -258,9 +258,15 @@ graph.add_edge("retry_repair", "repair")
 graph.add_edge("repair", "schema_check")
 graph.add_edge("retry_schema_fetch", "fetch")
 graph.add_conditional_edges("reasoning_check", route_quality, {
-    "deduplicate": "deduplicate", "quarantine": "quarantine",
+    "doc_consistency": "doc_consistency_check", "quarantine": "quarantine",
     "retry_fetch": "retry_reasoning_fetch", "human_review": "human_review"})
 graph.add_edge("retry_reasoning_fetch", "fetch")
+graph.add_conditional_edges("doc_consistency_check", route_doc_consistency, {
+    "deduplicate": "deduplicate", "repair_presentation": "retry_presentation",
+    "quarantine": "quarantine", "human_review": "human_review"})
+graph.add_node("retry_presentation", lambda s: bump_retry(s, "presentation_repair"))
+graph.add_edge("retry_presentation", "repair_presentation")
+graph.add_edge("repair_presentation", "doc_consistency_check")
 graph.add_conditional_edges("deduplicate", route_duplicate, {
     "persist": "persist", "duplicate_review": "duplicate_review"})
 graph.add_conditional_edges("duplicate_review", route_duplicate_decision, {
