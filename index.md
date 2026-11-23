@@ -4,10 +4,10 @@
 
 | ID | 食譜 | 類型 | 來源 | 狀態 | 主要注意事項 |
 |---|---|---|---|---|---|
-| RCP-001 | [新手簡易歐式麵包](wiki/recipes/easiest-loaf.md) | 酵母麵包 | SRC-001 | WARNING | 原站總時間與分段發酵、烘烤時間難完全對應 |
+| RCP-001 | [新手簡易歐式麵包](wiki/recipes/easiest-loaf.md) | 酵母麵包 | SRC-001 | PASS | 原站 2 小時 10 分鐘為估時；第一次發酵可達 1–2 小時，較久時會延長；冷卻另計 |
 | RCP-002 | [經典磅蛋糕](wiki/recipes/original-pound-cake.md) | 奶油蛋糕 | SRC-002 | PASS | 出爐後靜置及完全冷卻另計 |
 | RCP-003 | [Cake Pan Cake 免蛋奶巧克力蛋糕本體](wiki/recipes/cake-pan-cake.md) | 巧克力蛋糕 | SRC-003 | PASS | 蛋糕本體不含奶蛋；原始糖霜含乳，非乳版本需查核巧克力成分 |
-| RCP-004 | [純素巧克力夾心餅乾蛋糕](wiki/recipes/vegan-cookies-cream-cake.md) | 純素蛋糕 | SRC-004 | WARNING | 需完全冷卻後才能抹糖霜；冷卻與裝飾時間未列入原站時間 |
+| RCP-004 | [純素巧克力夾心餅乾蛋糕](wiki/recipes/vegan-cookies-cream-cake.md) | 純素蛋糕 | SRC-004 | PASS | 原站準備 30 分鐘、烘烤 35 分鐘；完全冷卻時間未提供，另計 |
 | RCP-005 | [免揉鄉村手作麵包](wiki/recipes/artisan-bread.md) | 免揉麵包 | SRC-005 | PASS | 已修正簡報誤用另一份揉製麵包配方；出爐至少冷卻 20 分鐘 |
 
 ## 狀態定義
