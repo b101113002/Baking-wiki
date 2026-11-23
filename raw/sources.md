@@ -4,10 +4,10 @@
 
 | ID | 食譜名稱 | 作者／網站 | URL | 查核註記 |
 |---|---|---|---|---|
-| SRC-001 | The Easiest Loaf of Bread You'll Ever Bake | PJ Hamel／King Arthur Baking | https://www.kingarthurbaking.com/recipes/the-easiest-loaf-of-bread-youll-ever-bake-recipe | 原站 hands-on 20 分鐘、總計 2 小時 10 分鐘；分段發酵與烘烤時間需另外核對 |
+| SRC-001 | The Easiest Loaf of Bread You'll Ever Bake | PJ Hamel／King Arthur Baking | https://www.kingarthurbaking.com/recipes/the-easiest-loaf-of-bread-youll-ever-bake-recipe | 原站 hands-on 20 分鐘、烘烤 20–25 分鐘、總計 2 小時 10 分鐘；第一次發酵 1–2 小時、第二次 45 分鐘，實際時間依發酵狀態可能延長，冷卻另計 |
 | SRC-002 | King Arthur's Original Pound Cake | Brinna Sands／King Arthur Baking | https://www.kingarthurbaking.com/recipes/king-arthurs-original-pound-cake-recipe | 核對奶油、雞蛋、粉液交替、烘烤與冷卻流程 |
 | SRC-003 | King Arthur's Original Cake Pan Cake | Brinna Sands／King Arthur Baking | https://www.kingarthurbaking.com/recipes/king-arthurs-original-cake-pan-cake-recipe | 區分不含奶蛋的蛋糕本體、含乳原始糖霜及非乳替代選項 |
-| SRC-004 | Vegan cookies & cream cake | Cassie Best／BBC Good Food | https://www.bbcgoodfood.com/recipes/vegan-cookies-cream-cake | 原站標示 prep 30 分鐘、cook 35 分鐘；步驟提及的一小撮鹽已補回材料表，冷卻及糖霜時間另計 |
+| SRC-004 | Vegan cookies & cream cake | Cassie Best／BBC Good Food | https://www.bbcgoodfood.com/recipes/vegan-cookies-cream-cake | 原站標示 prep 30 分鐘、cook 35 分鐘；步驟提及的一小撮鹽已補回材料表；蛋糕須完全冷卻後才可抹糖霜，冷卻時間未提供，另計 |
 | SRC-005 | Artisan Bread Recipe (4 Ingredients) | Sally McKenney／Sally's Baking | https://sallysbakingaddiction.com/homemade-artisan-bread/ | 頁面標示更新 2026-05-29；採免揉、偏涼水、475°F、可選 3–4 杯蒸氣水版本 |
 
 ## 來源使用原則
