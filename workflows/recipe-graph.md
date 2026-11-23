@@ -45,7 +45,7 @@ flowchart TD
     R1 -->|否| H[HUMAN_REVIEW]
     F --> G[NORMALIZE] --> I{SCHEMA_CHECK}
     I -->|PASS| J{REASONING_CHECK}
-    I -->|格式可修正| K[REPAIR] --> R5{格式修正次數 < 2?}
+    I -->|格式可修正| K[REPAIR] --> R5{格式修正尚可重試?}
     R5 -->|是| I
     R5 -->|否| H
     I -->|缺原始資料| R2{資料重取未超限?}
@@ -59,7 +59,7 @@ flowchart TD
     R3 -->|否／重大錯誤| H
     DC -->|一致| L[DEDUPLICATE]
     DC -->|簡報內容不一致| RP[REPAIR_PRESENTATION]
-    RP --> R6{簡報修正次數 < 2?}
+    RP --> R6{簡報修正尚可重試?}
     R6 -->|是| DC
     R6 -->|否| H
     DC -->|檢查工具未接通| Q
