@@ -77,7 +77,6 @@
 - workflows/recipe-graph.md：Graph 流程圖；workflows/langgraph-example.py：程式骨架。
 - reports/execution-record.md：人工稽核／模擬紀錄。
 - reports/recipe-audit-2026-11-23.md：逐篇食譜稽核。
-- reports/submission-summary.md：六項作業繳交總表。
 - reports/reflection.md：作業反思；presentations/：獨立 HTML 簡報。
 - 修改食譜需同步檢查來源、索引、對應簡報、README 及 log，並保留修改原因。
 
