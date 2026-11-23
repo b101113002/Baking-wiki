@@ -27,6 +27,7 @@ class RecipeState(TypedDict, total=False):
     source_status: str
     schema_status: str
     quality_status: str
+    doc_consistency_status: str
     persist_status: str
     report: dict[str, Any]
 
@@ -110,6 +111,23 @@ def reasoning_check(state: RecipeState) -> dict:
     return {"quality_status": "WARNING", "validation_issues": issues}
 
 
+def doc_consistency_check(state: RecipeState) -> dict:
+    # TODO: load the paired Markdown Wiki and HTML deck, then compare source URL,
+    # ingredient names/amounts, yield, pan, temperature, key method and status.
+    # Never report PASS until a real file comparator has completed those checks.
+    return {
+        "doc_consistency_status": "WARNING",
+        "validation_issues": state.get("validation_issues", []) +
+            ["Markdown／HTML 自動一致性比較器尚未連接；需人工核對"],
+    }
+
+
+def repair_presentation(state: RecipeState) -> dict:
+    # TODO: regenerate/update HTML only from the approved normalized Wiki record.
+    # Do not invent values or silently replace manually curated content.
+    return {"doc_consistency_status": "MISMATCH"}
+
+
 def deduplicate(state: RecipeState) -> dict:
     # TODO: compare title, source URL, ingredients and method similarity.
     return {"duplicate_matches": state.get("duplicate_matches", [])}
@@ -165,14 +183,25 @@ def route_schema(state: RecipeState) -> Literal["reasoning_check", "repair", "re
     return "human_review"
 
 
-def route_quality(state: RecipeState) -> Literal["deduplicate", "quarantine", "retry_fetch", "human_review"]:
+def route_quality(state: RecipeState) -> Literal["doc_consistency", "quarantine", "retry_fetch", "human_review"]:
     status = state.get("quality_status")
     if status == "PASS":
-        return "deduplicate"
+        return "doc_consistency"
     if status == "WARNING":
         return "quarantine"
     if retry_count(state, "reasoning_fetch") < MAX_RETRIES:
         return "retry_fetch"
+    return "human_review"
+
+
+def route_doc_consistency(state: RecipeState) -> Literal["deduplicate", "repair_presentation", "quarantine", "human_review"]:
+    status = state.get("doc_consistency_status")
+    if status == "PASS":
+        return "deduplicate"
+    if status == "WARNING":
+        return "quarantine"
+    if retry_count(state, "presentation_repair") < MAX_RETRIES:
+        return "repair_presentation"
     return "human_review"
 
 
@@ -200,7 +229,8 @@ for name, fn in [
     ("plan", plan), ("search", search), ("fetch", fetch),
     ("source_gate", source_gate), ("parse", parse), ("normalize", normalize),
     ("schema_check", schema_check), ("repair", repair),
-    ("reasoning_check", reasoning_check), ("deduplicate", deduplicate),
+    ("reasoning_check", reasoning_check), ("doc_consistency_check", doc_consistency_check),
+    ("repair_presentation", repair_presentation), ("deduplicate", deduplicate),
     ("duplicate_review", duplicate_review), ("persist", persist),
     ("quarantine", quarantine), ("human_review", human_review), ("report", report),
 ]:
