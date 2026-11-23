@@ -36,7 +36,7 @@
 - `persisted_files`：成功寫入的檔案
 - `run_log`：節點輸入、輸出、時間與結果
 
-## 5. Graph 節點與條件流程
+## 5. Graph 節點與條件流程（以 workflows/recipe-graph.md 修訂版為準）
 `START → PLAN → SEARCH → FETCH → SOURCE_GATE → PARSE → NORMALIZE → SCHEMA_CHECK → REASONING_CHECK`
 
 條件分支：
@@ -45,10 +45,12 @@
 - `SCHEMA_CHECK=PASS`：進入語意與數值檢查。
 - `SCHEMA_CHECK=FAIL`：可修正欄位格式時進入 REPAIR；缺少原始資料時回 FETCH／SEARCH。
 - `REASONING_CHECK=PASS`：進入 DEDUPLICATE。
-- `REASONING_CHECK=WARNING`：可保存至待確認區，不得標示為已驗證。
+- `REASONING_CHECK=WARNING`：只能保存至待確認區（QUARANTINE），不得標示為已驗證或寫入正式食譜索引。
 - `REASONING_CHECK=FAIL`：不得寫入正式食譜區；回到 FETCH／SEARCH。
 - `REPAIR` 後必須重新驗證；最多重試 2 次，超過上限保留 WARNING／FAIL 與問題紀錄。
-- `DEDUPLICATE → PERSIST → REPORT → END`。
+- `DEDUPLICATE → DUPLICATE_REVIEW（必要時）→ PERSIST → REPORT → END`。
+- PERSIST 失敗須有限次重試；仍失敗時記錄失敗並交由人工處理，不得標示成功。
+- FAIL 與無法判定的重複衝突進入 HUMAN_REVIEW。
 
 ### Mermaid Graph
 ```mermaid
