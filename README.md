@@ -6,6 +6,9 @@
 - **[烘焙食譜教學簡報館（首頁）](index.html)**：瀏覽多份獨立食譜教學簡報與專題介紹。
 - [食譜 Wiki 索引](index.md)
 
+## 專案維護規範
+- [專案總注意事項與維護規範](project-notes.md)
+
 ## 快速導覽
 - [Agent 規格](agent.md)
 - [來源清單](raw/sources.md)
